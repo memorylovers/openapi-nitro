@@ -36,7 +36,7 @@ jobs:
         with:
           cache: "pnpm"
           node-version: "20"
-          registry-url: https://npm.pkg.github.com
+          registry-url: https://registry.npmjs.org/
 
       # *****************************************************
       # * set version in package.json
