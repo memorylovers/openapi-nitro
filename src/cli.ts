@@ -1,4 +1,5 @@
 import { defineCommand, runMain } from "citty";
+import consola from "consola";
 import pkg from "../package.json";
 import { generate } from "./generator";
 
@@ -22,7 +23,7 @@ const main = defineCommand({
     },
   },
   run: async ({ args }) => {
-    console.log(`i=${args.input}, o=${args.output}`);
+    consola.log(`i=${args.input}, o=${args.output}`);
     await generate({
       inputFilePath: args.input,
       outputDirPath: args.output
