@@ -1,6 +1,6 @@
 # openapi-nitro
 
-Generate unjs/nitro routes dir from OpenAPI Spec
+Generate a unjs/nitro routes dirs from an OpenAPI spec
 
 ## Libraries
 
