@@ -10,8 +10,7 @@ const main = defineCommand({
   },
   args: {
     input: {
-      type: "string",
-      alias: "i",
+      type: "positional",
       default: "./openapi.yaml",
       description: "Input OpenAPI file path",
     },
