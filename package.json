@@ -1,0 +1,67 @@
+{
+  "name": "openapi-nitro",
+  "version": "0.0.1",
+  "description": "Generator nitro routes from OpenAPI",
+  "author": "Memory Lovers, LLC<https://github.com/memorylovers>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/memory-lovers",
+  "homepage": "https://github.com/memorylovers/openapi-nitro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memorylovers/openapi-nitro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/memorylovers/openapi-nitro/issues"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "nitro",
+    "unjs/nitro",
+    "unjs",
+    "OpenAPI",
+    "Swagger"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "openapi-nitro": "./dist/cli.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "CONSOLA_LEVEL=5 vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.2.0",
+    "dir-compare": "^5.0.0",
+    "jiti": "^1.21.6",
+    "typescript": "^5.5.4",
+    "unbuild": "^2.0.0",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
+    "citty": "^0.1.6",
+    "consola": "^3.2.3",
+    "defu": "^6.1.4",
+    "openapi3-ts": "^4.3.3",
+    "pathe": "^1.1.2"
+  }
+}
