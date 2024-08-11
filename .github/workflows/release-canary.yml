@@ -2,7 +2,7 @@ name: Publish Release Canary
 "on":
   push:
     branches:
-      - develop/*
+      - develop
   workflow_dispatch:
 
 env:
