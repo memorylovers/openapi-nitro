@@ -1,0 +1,30 @@
+{
+  "name": "openapi-nitro",
+  "version": "0.0.1",
+  "description": "Collection of tiny utilities for TypeScript",
+  "author": "Memory Lovers, LLC<https://github.com/memorylovers>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/memory-lovers",
+  "homepage": "https://github.com/memorylovers/openapi-nitro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memorylovers/openapi-nitro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/memorylovers/openapi-nitro/issues"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "nitro",
+    "unjs/nitro",
+    "unjs",
+    "OpenAPI",
+    "Swagger"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
