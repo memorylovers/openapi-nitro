@@ -1,6 +1,6 @@
 {
   "name": "openapi-nitro",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Generator nitro routes from OpenAPI",
   "author": "Memory Lovers, LLC<https://github.com/memorylovers>",
   "license": "MIT",
