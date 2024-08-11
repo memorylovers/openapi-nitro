@@ -2,6 +2,7 @@ import consola from "consola";
 import { convertToRouteData } from "./converter";
 import { Options } from "./models";
 import { parseSpec } from "./parser";
+import { writeRotueData } from "./writer";
 
 export async function generate(option: Options) {
   consola.debug(`generate: ${JSON.stringify(option)}`);
@@ -13,5 +14,5 @@ export async function generate(option: Options) {
   const routes = convertToRouteData(openApiDoc);
 
   // write routes dir
-  // await writeRotueData(option, routes);
+  await writeRotueData(option, routes);
 }
