@@ -11,6 +11,9 @@ env:
   TAG_VERSION_PREFIX: v
   VERSION:
 
+# *****************************************************
+# * publish to npm when add tag
+# *****************************************************
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -36,9 +39,13 @@ jobs:
           registry-url: https://npm.pkg.github.com
 
       # *****************************************************
+      # * set version in package.json
+      # *****************************************************
+      - run: pnpm version ${{ env.VERSION }} --no-git-tag-version --allow-same-version
+
+      # *****************************************************
       # * Install and Build
       # *****************************************************
-      - run: pnpm version ${{ env.VERSION }}
       - run: pnpm i && pnpm build
 
       # *****************************************************
