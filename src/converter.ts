@@ -10,7 +10,11 @@ export function convertToRouteData(openApiDoc: OpenAPIObject): RouteData[] {
 
       methods.forEach(method => {
         if (item[method] == null) return;
-        acc.push({ method: method as any, path: path });
+        acc.push({
+          method: method as any,
+          path: path,
+          item: item,
+        });
       });
       return acc;
     }, []);
