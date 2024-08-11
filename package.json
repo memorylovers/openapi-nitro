@@ -23,8 +23,40 @@
     "Swagger"
   ],
   "type": "module",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "openapi-nitro": "./dist/cli.mjs"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "unbuild",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "jiti": "^1.21.6",
+    "typescript": "^5.5.4",
+    "unbuild": "^2.0.0",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "citty": "^0.1.6",
+    "consola": "^3.2.3",
+    "defu": "^6.1.4"
   }
 }
