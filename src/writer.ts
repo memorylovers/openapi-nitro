@@ -1,5 +1,5 @@
 import consola from "consola";
-import { existsSync, mkdirSync, writeFileSync } from "fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "pathe";
 import { Options, RouteData } from "./models";
 
