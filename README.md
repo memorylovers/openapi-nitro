@@ -35,12 +35,17 @@ OPTIONS
   -o, --output="./routes"    Output dir path
 ```
 
-## Libraries
+## Used Packages
 
 - [@apidevtools/swagger-parser](https://www.npmjs.com/package/@apidevtools/swagger-parser) ... OpenAPI parser/validator
 - [openapi3-ts](https://www.npmjs.com/package/openapi3-ts) ... TypeScript library to help building OpenAPI 3.x
 - [unjs/citty](https://github.com/unjs/citty) ... CLI Builder
 - [unjs/unbuild](https://github.com/unjs/unbuild) ... bundler
+
+## Inspired Packages
+
+- [typed-openapi](https://github.com/astahmer/typed-openapi) ... generator API Client and Scheme, Model from OpenAPI spec
+- [typebox-codegen](https://github.com/sinclairzx81/typebox-codegen) ... transform TypeScript to [valibot](https://github.com/fabian-hiller/valibot), [zod](https://github.com/colinhacks/zod), etc.
 
 ## License
 
