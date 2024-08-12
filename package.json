@@ -46,6 +46,7 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "setver": "pnpm version --no-git-tag-version --allow-same-version",
     "test": "CONSOLA_LEVEL=5 vitest run"
   },
   "devDependencies": {
