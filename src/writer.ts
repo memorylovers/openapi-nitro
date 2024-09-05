@@ -20,9 +20,12 @@ export async function writeRotueData({ outputDirPath, overwrite }: Options, rout
       const filePath = join(dirPath, fileName);
       const fileExists = existsSync(filePath);
       const fileContent = toRouteContent(route);
-      if (fileExists && !!overwrite) {
-        consola.warn(`write:overwrite: ${join(route.path, fileName)}`);
-        writeFileSync(filePath, fileContent, { encoding: "utf8" });
+      if (fileExists) {
+        if (!!overwrite) {
+          consola.warn(`write:overwrite: ${join(route.path, fileName)}`);
+          writeFileSync(filePath, fileContent, { encoding: "utf8" });
+        }
+        consola.debug(`skip: ${join(route.path, fileName)}`);
       } else {
         writeFileSync(filePath, fileContent, { encoding: "utf8" });
         consola.debug(`write: ${join(route.path, fileName)}`);
