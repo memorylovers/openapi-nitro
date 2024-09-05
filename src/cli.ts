@@ -20,12 +20,19 @@ const main = defineCommand({
       default: join(cwd, "./routes"),
       description: "Output dir path",
     },
+    overwrite: {
+      type: "boolean",
+      alias: "f",
+      default: false,
+      description: "force overwrite exist files",
+    },
   },
   run: async ({ args }) => {
     consola.log(`i=${args.input}, o=${args.output}`);
     await generate({
       inputFilePath: args.input,
-      outputDirPath: args.output
+      outputDirPath: args.output,
+      overwrite: args.overwrite,
     });
   },
 });
