@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "pathe";
 import { Options, RouteData } from "./models";
 
-export async function writeRotueData({ outputDirPath }: Options, routes: RouteData[]) {
+export async function writeRotueData({ outputDirPath, overwrite }: Options, routes: RouteData[]) {
   await Promise.all(
     routes.map(async route => {
       const fileName = `index.${route.method}.ts`;
@@ -20,14 +20,13 @@ export async function writeRotueData({ outputDirPath }: Options, routes: RouteDa
       const filePath = join(dirPath, fileName);
       const fileExists = existsSync(filePath);
       const fileContent = toRouteContent(route);
-      if (fileExists) {
-        consola.warn(`exist: ${join(route.path, fileName)}`);
+      if (fileExists && !!overwrite) {
+        consola.warn(`write:overwrite: ${join(route.path, fileName)}`);
         writeFileSync(filePath, fileContent, { encoding: "utf8" });
       } else {
         writeFileSync(filePath, fileContent, { encoding: "utf8" });
         consola.debug(`write: ${join(route.path, fileName)}`);
       }
-
     })
   );
 }
